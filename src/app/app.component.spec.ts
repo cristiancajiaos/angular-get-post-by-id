@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'get-post-by-id'`, () => {
+  it(`should have as title 'base-for-rxjs'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('get-post-by-id');
+    expect(app.title).toEqual('base-for-rxjs');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('get-post-by-id app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('base-for-rxjs app is running!');
   });
 });
