@@ -9,6 +9,7 @@ import { PostsService } from './posts.service';
 })
 export class PostsComponent implements OnInit {
 
+  singlePost: Post;
   posts: Post[];
 
   constructor(
@@ -18,6 +19,10 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
     this.post.getPosts().subscribe(posts => {
       this.posts = posts;
+    });
+
+    this.post.getPost(1).subscribe(post => {
+      this.singlePost = post;
     });
   }
 
